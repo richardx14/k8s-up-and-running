@@ -4,4 +4,12 @@ metadata:
   name: kuard
 spec:
   containers:
+    - image: richardx14/kuard-amd64-rh-version:1
+      name: kuard
+      ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
 
+  imagePullSecrets:
+  - name: regsecret2
